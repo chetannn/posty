@@ -28,6 +28,6 @@ Route::post('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])-
 Route::post('/posts', [\App\Http\Controllers\PostsController::class, 'store']);
 Route::get('/posts', [\App\Http\Controllers\PostsController::class, 'index']);
 Route::get('/posts/create', [\App\Http\Controllers\PostsController::class, 'create'])->middleware('auth');
-Route::get('/posts/delete/{id}', [\App\Http\Controllers\PostsController::class, 'destroy'])->middleware('auth');;
-Route::get('/posts/edit/{id}', [\App\Http\Controllers\PostsController::class, 'edit'])->middleware('auth');;
-Route::post('/posts/update/{id}', [\App\Http\Controllers\PostsController::class, 'update'])->middleware('auth');;
+Route::get('/posts/delete/{id}', [\App\Http\Controllers\PostsController::class, 'destroy'])->middleware('auth');
+Route::get('/posts/edit/{id}', [\App\Http\Controllers\PostsController::class, 'edit'])->middleware('auth');
+Route::post('/posts/update/{id}', [\App\Http\Controllers\PostsController::class, 'update'])->middleware('auth');
